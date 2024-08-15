@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="main-title">Kalkulator BMI</h1>
+    </header>
+    <main>
+        <aside>
+            <article>
+                <p>
+                    Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat.
+                    Bagaimana denganmu?
+                </p>
+                <p>Yuk Hitung sekarang di Kalkulator BMI!</p>
+            </article>
+    
+            <form>
+                <div>
+                    <h3>Jenis Kelamin</h3>
+                    <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki"><label for="laki-laki">Laki-Laki</label> 
+                    <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan"><label for="perempuan">Perempuan</label> 
+                </div>
+    
+                <div>
+                    <h3>Berat Badan</h3>
+                    <input type="number" id="input-weight"> 
+                </div>
+
+                <div>
+                    <h3>Tinggi Badan</h3>
+                    <input type="number" id="input-height"> 
+                </div>
+    
+                <div class="form-btn-container">
+                    <button class="button bg-cornsilk" type="button" onclick="formValidate()">Hitung BMI</button>
+                    <!--<button type="submit">Hitung BMI</button>-->
+                    <button class="button bg-reset">Reset</button>
+                </div>
+            </form>
+    
+            <article>
+                <header>
+                    <h2>Keunggulan Fitur</h2>
+                </header>
+    
+                <ol>
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>Mempersiapkan program penurunan berat badan</li>
+                </ol>
+
+                <p>
+                    Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hami atau menyusui tidak boleh mengandalkan pembacaan BMI ini)
+                    dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.
+                </p>
+
+                <p>
+                    Kalkulator akan memberikan Anda gambaran tentang perbandingan berat badan Adnda dengan nilai umum.
+                    Indeks Massa Tubuh (BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi berat badan Anda (dalam meter)
+                    atu BMI = Kg/M^2
+                </p>
+            </article>
+        </aside>
+
+        <aside>
+            <section>
+                <h3>Hasil</h3>
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat.
+                    Bagaimana denganmu?</p>
+                <div id="bmiResult" style="display:none;">
+                    <div class="result-header">Status Berat Badan</div>
+                    <div class="result-value" id="bmiValue"></div>
+                    <div class="result-interpretation" id="bmiInterpretation"></div>
+                    <div class="result-description" id="bmiDescription"></div>
+                    <button type="button bg-cornsilk">Download Hasil BMI</button>
+                    <div class="buttons">
+                        <button type="button bg-cornsilk">Konsultasi Ahli Gizi Via Aplikasi</button>
+                        <button type="button bg-cornsilk">Registrasi Online Ahli Gizi</button>
+                    </div>
+                </div>
+            </section>
+        </aside>
+
+    </main>
+    <footer>
+        <p>Made by Adinda Aryani - RevoU</p>
+    </footer>
+
+    <script src="js\scripts.js"></script>
+</body>
+</html>

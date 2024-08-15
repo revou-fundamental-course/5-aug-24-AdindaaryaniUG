@@ -1,0 +1,106 @@
+.main-title{ /*kalo class harus pake . */
+    text-align: center;
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+main{
+    display: flex;
+}
+form {
+    padding: 12px;
+    background-color: aliceblue;
+}
+
+aside {
+    padding: 48px;
+}
+
+.button {
+    height: 32px;
+    border: none;
+    border-radius: 4px;
+}
+
+.form-btn-container{
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+.bg-cornsilk {
+    background-color: cornsilk;
+}
+
+.bg-reset {
+    background-color: red;
+    color: white;
+}
+
+input[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+#bmiResult {
+    max-width: 400px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.result-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.result-value {
+    font-size: 36px;
+    color: #007bff;
+}
+.result-interpretation {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.result-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button {
+    width: 48%;
+    background-color: #17a2b8;
+}
+.buttons button:hover {
+    background-color: #138496;
+}
