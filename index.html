@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\styles.css">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+<!--START BODY-->
 <body>
     <header>
+        <!-- Judul utama halaman dengan class "main-title" -->
         <h1 class="main-title">Kalkulator BMI</h1>
     </header>
-    <main>
-        <aside>
-            <article>
+    <main class="container">
+        <!-- Elemen aside untuk konten samping kiri dengan class "left-content" -->
+        <aside class="left-content">
+            <article class="info-article">
+                <!-- Paragraf pertama berisi deskripsi tentang berat badan ideal -->
                 <p>
-                    Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat.
-                    Bagaimana denganmu?
+                    Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang
+                    penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu?
                 </p>
-                <p>Yuk Hitung sekarang di Kalkulator BMI!</p>
+                <p>Yuk hitung sekarang di Kalkulator BMI!</p>
             </article>
-    
+
+            <!-- Pembuatan form untuk menerima input dari pengguna -->
             <form>
-                <div>
+                <div class="form-group">
                     <h3>Jenis Kelamin</h3>
-                    <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki"><label for="laki-laki">Laki-Laki</label> 
-                    <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan"><label for="perempuan">Perempuan</label> 
-                </div>
-    
-                <div>
-                    <h3>Berat Badan</h3>
-                    <input type="number" id="input-weight"> 
+                    <!-- Input radio untuk memilih jenis kelamin laki-laki -->
+                    <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki">
+                    <label for="laki-laki">Laki-Laki</label>
+                    <!-- Input radio untuk memilih jenis kelamin perempuan -->
+                    <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan">
+                    <label for="perempuan">Perempuan</label>
                 </div>
 
-                <div>
-                    <h3>Tinggi Badan</h3>
-                    <input type="number" id="input-height"> 
+                <div class="form-group">
+                    <h3>Berat Badan (kg)</h3>
+                    <!-- Input number untuk memasukkan berat badan dengan placeholder sebagai petunjuk -->
+                    <input type="number" id="input-weight" placeholder="Masukkan berat badan Anda">
                 </div>
-    
+
+                <div class="form-group">
+                    <h3>Tinggi Badan (cm)</h3>
+                    <!-- Input number untuk memasukkan tinggi badan dengan placeholder sebagai petunjuk -->
+                    <input type="number" id="input-height" placeholder="Masukkan tinggi badan Anda">
+                </div>
+
                 <div class="form-btn-container">
-                    <button class="button bg-cornsilk" type="button" onclick="formValidate()">Hitung BMI</button>
-                    <!--<button type="submit">Hitung BMI</button>-->
-                    <button class="button bg-reset">Reset</button>
+                    <!-- Button untuk menghitung BMI, memanggil fungsi JavaScript "formValidate" saat diklik -->
+                    <button class="button bg-blue" type="button" onclick="formValidate()">Hitung BMI</button>
+                    <!-- Button untuk mereset form, mengembalikan semua input ke kondisi awal -->
+                    <button class="button bg-reset" type="reset">Reset</button>
                 </div>
             </form>
-    
-            <article>
+
+            <article class="features-article">
                 <header>
                     <h2>Keunggulan Fitur</h2>
                 </header>
-    
+                <!-- Daftar/List terurut yang menjelaskan keunggulan fitur kalkulator BMI -->
                 <ol>
                     <li>Menghitung berat badan</li>
                     <li>Menentukan kategori berat badan ideal atau tidak</li>
@@ -56,42 +69,58 @@
                 </ol>
 
                 <p>
-                    Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hami atau menyusui tidak boleh mengandalkan pembacaan BMI ini)
-                    dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.
+                    Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh
+                    mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain
+                    berkonsultasi dengan orang yang memenuhi syarat seperti dokter.
                 </p>
 
                 <p>
-                    Kalkulator akan memberikan Anda gambaran tentang perbandingan berat badan Adnda dengan nilai umum.
-                    Indeks Massa Tubuh (BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi berat badan Anda (dalam meter)
-                    atu BMI = Kg/M^2
+                    Kalkulator akan memberikan Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum.
+                    Indeks Massa Tubuh (BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat
+                    tinggi berat badan Anda (dalam meter) atau BMI = Kg/M<sup>2</sup>.
                 </p>
             </article>
         </aside>
 
-        <aside>
-            <section>
+        <!-- Elemen aside untuk konten samping kanan dengan class "right-content" -->
+        <aside class="right-content">
+            <section class="result-section">
                 <h3>Hasil</h3>
-                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat.
-                    Bagaimana denganmu?</p>
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang
+                    penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu?</p>
                 <div id="bmiResult" style="display:none;">
                     <div class="result-header">Status Berat Badan</div>
                     <div class="result-value" id="bmiValue"></div>
+                    <!-- Div untuk interpretasi hasil BMI -->
                     <div class="result-interpretation" id="bmiInterpretation"></div>
+                    <!-- Div untuk deskripsi tambahan tentang hasil BMI -->
                     <div class="result-description" id="bmiDescription"></div>
-                    <button type="button bg-cornsilk">Download Hasil BMI</button>
-                    <div class="buttons">
-                        <button type="button bg-cornsilk">Konsultasi Ahli Gizi Via Aplikasi</button>
-                        <button type="button bg-cornsilk">Registrasi Online Ahli Gizi</button>
-                    </div>
+                    <!-- Button untuk mengunduh hasil BMI -->
+                    <button class="button bg-blue" type="button">Download Hasil BMI</button>
                 </div>
+                <!-- Daftar/List terurut yang menjelaskan kategori BMI dan interpretasi masing-masing kategori -->
+                <ol>
+                    <li>BMI Normal berada pada kisaran 17-25</li>
+                    <li>Jika angka BMI melebihi 25, maka kamu memiliki berat badan berlebih</li>
+                    <li>Jika angka BMI berada di bawah 17, maka kamu memiliki berat badan rendah</li>
+                    <li>Jika angka BMI sudah melebihi angka 27, sebaiknya segera dilakukan penanganan untuk mencegah
+                        timbulnya penyakit</li>
+                </ol>
             </section>
         </aside>
 
     </main>
+
+    <!--START FOOTER-->
     <footer>
         <p>Made by Adinda Aryani - RevoU</p>
     </footer>
+    <!--END FOOTER-->
 
-    <script src="js\scripts.js"></script>
+    <!-- Menghubungkan file JavaScript eksternal untuk logika interaktif halaman -->
+    <script src="js/scripts.js"></script>
+
+<!--END BODY-->
 </body>
+
 </html>
