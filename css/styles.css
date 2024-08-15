@@ -1,52 +1,85 @@
-.main-title{ /*kalo class harus pake . */
-    text-align: center;
-}
+/* Global/Body Styles */
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #f9f9f9;
     margin: 0;
     padding: 20px;
+    color: #333;
+    line-height: 1.6;
 }
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    color: #0ec5e1;
+    margin-bottom: 0;
+}
+
+/* Container Styles */
 .container {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
-}
-main{
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+
+/* Styles untuk konten kanan and kiri sections */
+.left-content, .right-content {
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+    margin: 20px;
+}
+
+/* Article dan Result Section */
+article, .result-section {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Heading Styles */
+h2, h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styles */
+.info-article p, .features-article p {
+    margin-bottom: 15px;
+}
+
+/* Form Styles */
 form {
-    padding: 12px;
+    padding: 20px;
     background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-aside {
-    padding: 48px;
+.form-group {
+    margin-bottom: 20px;
 }
 
-.button {
-    height: 32px;
-    border: none;
-    border-radius: 4px;
+/* Radio Button Styles */
+.form-group input[type="radio"] {
+    margin-right: 5px;
 }
 
-.form-btn-container{
-    margin-top: 24px;
-    margin-bottom: 16px;
-}
-.bg-cornsilk {
-    background-color: cornsilk;
-}
-
-.bg-reset {
-    background-color: red;
-    color: white;
-}
-
-input[type=number]{
+/* Number Input Styles */
+input[type=number] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -58,49 +91,121 @@ input[type=number]{
     font-size: 14px;
 }
 
+/* Button Styles */
+.button {
+    height: 32px;
+    width: 48%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Form Button Container Styles */
+.form-btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.bg-blue {
+    background-color: #0ec5e1;
+    border: 1px solid #0ec5e1;
+    color: white;
+}
+
+.bg-blue:hover {
+    background-color: #0da9c3;
+}
+
+/* Reset Button Hover Styles */
+.bg-reset {
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+}
+
+.bg-reset:hover {
+    background-color: darkred;
+}
+
+/* Footer Styles */
 footer {
     text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
 }
 
-@media only screen and (max-width: 480px) {
-    main {
-        flex-direction: column;
-    }
-}
-
+/* BMI Result Styles */
 #bmiResult {
     max-width: 400px;
     margin: 20px auto;
-    background: #fff;
+    background: aliceblue;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
+/* Result Section Styles */
 .result-header {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #007bff;
 }
+
 .result-value {
     font-size: 36px;
     color: #007bff;
 }
+
 .result-interpretation {
     font-size: 18px;
     margin-bottom: 20px;
 }
+
 .result-description {
     font-size: 14px;
     margin-bottom: 10px;
     color: #555;
 }
-.buttons {
-    display: flex;
-    justify-content: space-between;
+
+/* Responsif untuk Perangkat Kecil dan Menengah  */
+@media only screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .left-content, .right-content {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .form-btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .button {
+        width: 100%;
+    }
 }
-.buttons button {
-    width: 48%;
-    background-color: #17a2b8;
-}
-.buttons button:hover {
-    background-color: #138496;
+
+/* Responsif untuk Perangkat Kecil  */
+@media only screen and (max-width: 600px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    input[type=number] {
+        font-size: 16px;
+    }
+
+    .result-value {
+        font-size: 28px;
+    }
 }
